@@ -1,52 +1,58 @@
 import './App.css';
 import topImage from './img/portfolio_cropped.JPG';
 import bottomImage from './img/IMG_2019.JPG';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav-link');
 
-const hamburgerTapped = navToggle.addEventListener('click', () => {
-  document.body.classList.toggle('nav-open');
-});
+// const hamburgerTapped = navToggle.addEventListener('click', () => {
+//   document.body.classList.toggle('nav-open');
+// });
 
-const a = navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-      document.body.classList.remove('nav-open')
-  })
-})
+// const a = navLinks.forEach(link => {
+//   link.addEventListener('click', () => {
+//       document.body.classList.remove('nav-open')
+//   })
+// })
 
 function App() {
   return (
     <div>
-      <body>
         <header>
-            <button class="nav-toggle" aria-label="toggle navigation" onClick={hamburgerTapped}>
-                <span class="hamburger"></span>
+            <button className="nav-toggle" aria-label="toggle navigation" onClick={() => {
+              // navToggle.addEventListener('click', () => {
+              //   document.body.classList.toggle('nav-open');
+              // })
+              console.log(navToggle)
+            }}>
+                <span className="hamburger"></span>
             </button>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">My Services</a></li>
-                    <li class="nav-item"><a href="#about-me" class="nav-link">About me</a></li>
-                    <li class="nav-item"><a href="#work" class="nav-link">My Work</a></li>
+            <nav className="nav">
+                <ul className="nav-list">
+                    <li className="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li className="nav-item"><a href="#services" class="nav-link">My Services</a></li>
+                    <li className="nav-item"><a href="#about-me" class="nav-link">About me</a></li>
+                    <li className="nav-item"><a href="#work" class="nav-link">My Work</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="intro" id="home">
-                <h1 class="section-title section-title-intro">
+            <section className="intro" id="home">
+                <h1 className="section-title section-title-intro">
                     Hi, I'm <strong>Kaiya Takahashi</strong>
                 </h1>
-                <p class="section-subtitle-intro">
+                <p className="section-subtitle-intro">
                     Front-End dev
                 </p>
-                <img class="intro-img myself-img" src={topImage} alt="first pic"></img>
+                <img className="intro-img myself-img" src={topImage} alt="first pic"></img>
             </section>
 
-            <section class="my-services" id="services">
-                <h2 class="seciton-title section-title-services">What I do</h2>
-                <div class="services">
-                    <div class="service">
+            <section className="my-services" id="services">
+                <h2 className="seciton-title section-title-services">What I do</h2>
+                <div className="services">
+                    <div className="service">
                         <h3>Design Website</h3>
                         <p>I created full stack website, using JavaScript as Front-End, 
                             Express.js as Back-end and PostgreSql as database. It has a
@@ -55,7 +61,7 @@ function App() {
                         </p>
                     </div>
 
-                    <div class="service">
+                    <div className="service">
                         <h3>Mobile App</h3>
                         <p>
                             I worked as a software developer to create invoice application at
@@ -66,14 +72,14 @@ function App() {
                     </div>
                 </div>
 
-                <a href="#work" class="btn">My Work</a>
+                <a href="#work" className="btn">My Work</a>
             </section>
 
-            <section class="about-me" id="about-me">
-                <h2 class="section-title-about">Who I am</h2>
-                <p class="section-subtitle-about">Front-End dev</p>
+            <section className="about-me" id="about-me">
+                <h2 className="section-title-about">Who I am</h2>
+                <p className="section-subtitle-about">Front-End dev</p>
 
-                <div class="about-me-body">
+                <div className="about-me-body">
                     <p>
                         I'm KaiyaTakahashi, and I am Front-End developer and iOS Mobile developer.
                     </p>
@@ -85,25 +91,25 @@ function App() {
                     <p></p>
                 </div>
     
-                <img class="about-me-img myself-img" src={bottomImage} alt="second pic"></img>
+                <img className="about-me-img myself-img" src={bottomImage} alt="second pic"></img>
             </section>
 
-            <section class="my-work" id="work">
-                <h2 class="section-title">My work</h2>
-                <p class="section-subtitle">A selection of my range of work</p>
+            <section className="my-work" id="work">
+                <h2 className="section-title">My work</h2>
+                <p className="section-subtitle">A selection of my range of work</p>
 
-                <div class="portfolio">
+                <div className="portfolio">
 
-                    <a href="#" class="portfolio-item">
-                        <img class="portfolio-img" src="https://iconbjjbelfast.com/wp-content/uploads/2017/04/default-image.jpg" alt="Project 1"></img>
+                    <a href="#" className="portfolio-item">
+                        <img className="portfolio-img" src="https://iconbjjbelfast.com/wp-content/uploads/2017/04/default-image.jpg" alt="Project 1"></img>
                     </a>
 
-                    <a href="#" class="portfolio-item">
-                        <img class="portfolio-img" src="https://iconbjjbelfast.com/wp-content/uploads/2017/04/default-image.jpg" alt="Project 2"></img>
+                    <a href="#" className="portfolio-item">
+                        <img className="portfolio-img" src="https://iconbjjbelfast.com/wp-content/uploads/2017/04/default-image.jpg" alt="Project 2"></img>
                     </a>
 
-                    <a href="#" class="portfolio-item">
-                        <img class="portfolio-img" src="https://iconbjjbelfast.com/wp-content/uploads/2017/04/default-image.jpg" alt="Project 3"></img>
+                    <a href="#" className="portfolio-item">
+                        <img className="portfolio-img" src="https://iconbjjbelfast.com/wp-content/uploads/2017/04/default-image.jpg" alt="Project 3"></img>
                     </a>
 
                 </div>
@@ -111,26 +117,25 @@ function App() {
         </main>
 
         <footer>
-            <a href="#" class="footer-link">yaikashi@icloud.com</a>
-            <ul class="social-list">
-                <li class="social-list-item">
-                    <a href="https://github.com/KaiyaTakahashi" class="social-list-link">
-                        <i class="fa-brands fa-github"></i>
+            <a href="#" className="footer-link">yaikashi@icloud.com</a>
+            <ul className="social-list">
+                <li className="social-list-item">
+                    <a href="https://github.com/KaiyaTakahashi" className="social-list-link">
+                        <FontAwesomeIcon icon={faGithub} />
                     </a>
                 </li>
-                <li class="social-list-item">
-                    <a href="https://github.com/KaiyaTakahashi" class="social-list-link">
-                        <i class="fa-brands fa-linkedin"></i>
+                <li className="social-list-item">
+                    <a href="https://github.com/KaiyaTakahashi" className="social-list-link">
+                        <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </li>
-                <li class="social-list-item">
-                    <a href="https://www.instagram.com/yaikashi_1019/?hl=en-gb" class="social-list-link">
-                        <i class="fa-brands fa-instagram"></i>
+                <li className="social-list-item">
+                    <a href="https://www.instagram.com/yaikashi_1019/?hl=en-gb" className="social-list-link">
+                        <FontAwesomeIcon icon={faInstagram} />
                     </a>
                 </li>
             </ul>
         </footer>
-      </body>
     </div>
   );
 }
