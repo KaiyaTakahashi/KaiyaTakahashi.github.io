@@ -4,6 +4,9 @@ import bottomImage from './img/IMG_2019.JPG';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
+import devTimeManagerImg from '/Users/kaiyatakahashi/Desktop/kaiya-portfolio/client/src/img/Screenshot 2022-12-08 at 1.16.49 PM.png';
+import invoiceImg from '/Users/kaiyatakahashi/Desktop/kaiya-portfolio/client/src/img/Screenshot 2022-12-08 at 1.44.07 PM.png';
+
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -27,7 +30,7 @@ function App() {
               // })
               console.log(navToggle)
             }}>
-                <span className="hamburger"></span>
+                {/* <span className="hamburger"></span> */}
             </button>
             <nav className="nav">
                 <ul className="nav-list">
@@ -95,22 +98,38 @@ function App() {
             </section>
 
             <section className="my-work" id="work">
-                <h2 className="section-title">My work</h2>
-                <p className="section-subtitle">A selection of my range of work</p>
+                <h2 className="section-title-work">My work</h2>
+                {/* <p className="section-subtitle">A selection of my range of work</p> */}
 
                 <div className="portfolio">
 
-                    <a href="#" className="portfolio-item">
-                        <img className="portfolio-img" src="https://iconbjjbelfast.com/wp-content/uploads/2017/04/default-image.jpg" alt="Project 1"></img>
-                    </a>
+                    <div href="#" className="portfolio-item">
+                        <img className="portfolio-img" src={devTimeManagerImg} alt="Project 1"></img>
+                        <p className='project-description'>
+                            Full-stuck react web application where the user can keep track of time of developping, and create and add an event to Google Calendar.
+                            <ul class="nobull">
+                                <li>Language: JavaScript, HTML5, CSS3</li>
+                                <li>Frameworks, Libraries, Environment: Node.js, Express.js, Material-UI</li>
+                                <li>Database: PostgreSql</li>
+                            </ul>
+                        </p>
+                    </div>
 
-                    <a href="#" className="portfolio-item">
-                        <img className="portfolio-img" src="https://iconbjjbelfast.com/wp-content/uploads/2017/04/default-image.jpg" alt="Project 2"></img>
-                    </a>
+                    <div href="#" className="portfolio-item">
+                        <img className="portfolio-img portfolio-img-invoice" src={invoiceImg} alt="Project 2"></img>
+                        <p className='project-description'>
+                            Collaborated with five others to build an invoice app which allows users to send invoices to customers.
+                            I worked on UI and created four screens and kept it clean and simple with libraries by using cocoapods.
+                            <ul class="nobull">
+                                <li>Language: Swift</li>
+                                <li>Database: Core data</li>
+                            </ul>
+                        </p>
+                    </div>
 
-                    <a href="#" className="portfolio-item">
+                    {/* <a href="#" className="portfolio-item">
                         <img className="portfolio-img" src="https://iconbjjbelfast.com/wp-content/uploads/2017/04/default-image.jpg" alt="Project 3"></img>
-                    </a>
+                    </a> */}
 
                 </div>
             </section>
@@ -125,7 +144,7 @@ function App() {
                     </a>
                 </li>
                 <li className="social-list-item">
-                    <a href="https://github.com/KaiyaTakahashi" className="social-list-link">
+                    <a href="https://www.linkedin.com/in/kaiya-takahashi-93323b25a/" className="social-list-link">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </li>

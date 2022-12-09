@@ -286,6 +286,12 @@ header {
     }
 }
 
+/* What I do */
+.btn {
+    color: white;
+    font-size: 20px;
+}
+
 /* About me */
 
 .about-me {
@@ -331,6 +337,10 @@ header {
 
 /* My Wrok */
 
+.section-title-work {
+    padding-bottom: 20px;
+}
+
 .my-work {
     background-color: var(--clr-dark);
     color: #ffff;
@@ -348,6 +358,19 @@ header {
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         ocacity 250ms linear;
     ;
+}
+
+.portfolio-img-invoice {
+    height: 200px;
+    width: auto;
+}
+
+.project-description {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .portfolio-img:hover,
