@@ -4,8 +4,8 @@ import bottomImage from './img/IMG_2019.JPG';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import devTimeManagerImg from '/Users/kaiyatakahashi/Desktop/kaiya-portfolio/client/src/img/Screenshot 2022-12-08 at 1.16.49 PM.png';
-import invoiceImg from '/Users/kaiyatakahashi/Desktop/kaiya-portfolio/client/src/img/Screenshot 2022-12-08 at 1.44.07 PM.png';
+import devTimeManagerImg from '/Users/kaiyatakahashi/Desktop/KaiyaTakahashi.github.io/src/img/Screenshot 2023-01-12 at 10.31.17 PM.png';
+import invoiceImg from '/Users/kaiyatakahashi/Desktop/KaiyaTakahashi.github.io/src/img/Screenshot 2022-12-08 at 1.44.07 PM.png';
 
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav-link');
