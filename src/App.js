@@ -103,7 +103,7 @@ function App() {
 
                 <div className="portfolio">
 
-                    <div href="#" className="portfolio-item">
+                    <div href="https://dancing-taiyaki-47a928.netlify.app" className="portfolio-item">
                         <img className="portfolio-img" src={devTimeManagerImg} alt="Project 1"></img>
                         <p className='project-description'>
                             Full-stuck react web application where the user can keep track of time of developping, and create and add an event to Google Calendar.
