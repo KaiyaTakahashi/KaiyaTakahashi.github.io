@@ -6,6 +6,7 @@ import { faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-
 
 import devTimeManagerImg from '/Users/kaiyatakahashi/Desktop/KaiyaTakahashi.github.io/src/img/Screenshot 2023-01-12 at 10.31.17 PM.png';
 import invoiceImg from '/Users/kaiyatakahashi/Desktop/KaiyaTakahashi.github.io/src/img/Screenshot 2022-12-08 at 1.44.07 PM.png';
+import { InView, useInView } from 'react-intersection-observer';
 
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -19,6 +20,75 @@ const navLinks = document.querySelectorAll('.nav-link');
 //       document.body.classList.remove('nav-open')
 //   })
 // })
+
+const WebsiteService = () => {
+    const {ref, inView, entry} = useInView({
+        threshold: 1
+    })
+    return (
+        <div className={inView ? "service": "serviceNotInView"} ref={ref}>
+            <h3>Full-Stack Website</h3>
+            <p>I created full stack website, using JavaScript as Front-End, 
+                Express.js as Back-end and PostgreSql as database. It has a
+                Login page which allows the user to login by using Json Web Token,
+                so that I can make the website more secure and provide better UX.
+            </p>
+        </div>
+    )
+}
+
+const MobileAppService = () => {
+    const {ref, inView, entry} = useInView({
+        threshold: 1
+    })
+    return (
+        <div className={inView ? "service": "serviceNotInView"} ref={ref}>
+            <h3>Mobile App</h3>
+            <p>
+                I worked as a software developer to create invoice application at
+                DP Code Academy. I basically worked on developping UI for the application.
+                I always tried to make the screen as simple as possible and easy for users to user by using libraries from
+                CocoaPods to provide a great UX.
+            </p>
+        </div>
+    )
+}
+
+const WhatIDo = () => {
+    const {ref, inView, entry} = useInView({
+        threshold: 0.4,
+        triggerOnce: true
+    })
+    return (
+
+        <section className={inView ?"my-services": "my-services-not-in-view"} ref={ref}>
+            <h2 className="seciton-title section-title-services">What I do</h2>
+            <div className="services">
+                
+                <div className="service">
+                    <h3>Full-Stack Website</h3>
+                    <p>I created full stack website, using JavaScript as Front-End, 
+                        Express.js as Back-end and PostgreSql as database. It has a
+                        Login page which allows the user to login by using Json Web Token,
+                        so that I can make the website more secure and provide better UX.
+                    </p>
+                </div>
+
+                <div className="service">
+                    <h3>Mobile App</h3>
+                    <p>
+                        I worked as a software developer to create invoice application at
+                        DP Code Academy. I basically worked on developping UI for the application.
+                        I always tried to make the screen as simple as possible and easy for users to user by using libraries from
+                        CocoaPods to provide a great UX.
+                    </p>
+                </div>
+            </div>
+
+            <a href="#work" className="btn">My Work</a>
+        </section>
+    )
+}
 
 function App() {
   return (
@@ -51,34 +121,8 @@ function App() {
                 </p>
                 <img className="intro-img myself-img" src={topImage} alt="first pic"></img>
             </section>
-
-            <section className="my-services" id="services">
-                <h2 className="seciton-title section-title-services">What I do</h2>
-                <div className="services">
-                    <div className="service">
-                        <h3>Design Website</h3>
-                        <p>I created full stack website, using JavaScript as Front-End, 
-                            Express.js as Back-end and PostgreSql as database. It has a
-                            Login page which allows the user to login by using Json Web Token,
-                            so that I can make the website more secure and provide better UX.
-                        </p>
-                    </div>
-
-                    <div className="service">
-                        <h3>Mobile App</h3>
-                        <p>
-                            I worked as a software developer to create invoice application at
-                            DP Code Academy. I basically worked on developping UI for the application.
-                            I always tried to make the screen as simple as possible and easy for users to user by using libraries from
-                            CocoaPods to provide a great UX.
-                        </p>
-                    </div>
-                </div>
-
-                <a href="#work" className="btn">My Work</a>
-            </section>
-
-            <section className="about-me" id="about-me">
+            <WhatIDo></WhatIDo>
+            <section className="about-me">
                 <h2 className="section-title-about">Who I am</h2>
                 <p className="section-subtitle-about">Front-End dev</p>
 
@@ -103,8 +147,10 @@ function App() {
 
                 <div className="portfolio">
 
-                    <div href="https://dancing-taiyaki-47a928.netlify.app" className="portfolio-item">
-                        <img className="portfolio-img" src={devTimeManagerImg} alt="Project 1"></img>
+                    <div className="portfolio-item">
+                        <a href='https://dancing-taiyaki-47a928.netlify.app' target="_blank">
+                            <img className="portfolio-img" src={devTimeManagerImg} alt="Project 1"></img>
+                        </a>
                         <p className='project-description'>
                             Full-stuck react web application where the user can keep track of time of developping, and create and add an event to Google Calendar.
                             <ul class="nobull">
