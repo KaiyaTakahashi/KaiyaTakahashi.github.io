@@ -101,7 +101,6 @@ h3 { font-size: var(--fs-h3); }
 .section-subtitle-about {
     background: var(--clr-gradual);
     font-size: var(--fs-h3);
-    padding: .25em 1em;
     box-shadow: var(--bs);
     color: #c5fff5;
 }
@@ -214,6 +213,29 @@ header {
     position: relative;
 }
 
+.contact-me::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-gradual);
+    opacity: 1;
+}
+@media (max-width: 670px) {
+    .intro-img {
+        width: 180px;
+    }
+    /* .section-subtitle-about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        width: calc(100% + 4em);
+        padding-left: 1em;
+        padding-right: calc(200px + 5em);
+    } */
+}
+
 @media (min-width: 600px) {
     .intro {
         display: grid;
@@ -240,6 +262,7 @@ header {
         grid-area: 1 / 1 / 3 / 2;
         /* Put colour label underneath */
         z-index: 2;
+        margin-right: 20px;
     }
 }
 
@@ -338,7 +361,7 @@ header {
         grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
-        width: calc(100% + 4em);
+        width: 102%;
         padding-left: 1em;
         padding-right: calc(200px + 5em);
     }
@@ -350,6 +373,7 @@ header {
     .about-me-img {
         grid-area: img;
         z-index: 2;
+        max-width: 100%;
     }
 }
 

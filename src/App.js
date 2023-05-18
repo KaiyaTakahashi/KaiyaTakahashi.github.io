@@ -113,13 +113,47 @@ function App() {
         </header>
         <main>
             <section className="intro" id="home">
-                <h1 className="section-title section-title-intro">
-                    Hi, I'm <strong>Kaiya Takahashi</strong>
-                </h1>
-                <p className="section-subtitle-intro">
+                <h2 className="section-title section-title-intro">
+                    Hi, I'm Kaiya
+                    <h3>
+                        Mobile Developer
+                    </h3>
+                    <h3>
+                        &
+                    </h3>
+                    <h3>
+                        Full-Stack Web Developer
+                    </h3>
+                </h2>
+                {/* <p className="section-subtitle-intro">
                     Front-End dev
-                </p>
+                </p> */}
                 <img className="intro-img myself-img" src={topImage} alt="first pic"></img>
+                <div>
+                    <div className='contact-me'>
+                        <div style={{display: "flex", columnGap: "5%", marginTop: "30px", paddingBottom: "20px"}}>
+                            <button>!!!!!</button>
+                            <h3>Contact Me Now</h3>
+                        </div>
+                    </div>
+                    <ul className="social-list" style={{height: "60%", display: "flex", alignItems: "center", margin: "0px"}}>
+                        <li className="social-list-item" style={{fontSize: "200%"}}>
+                            <a href="https://github.com/KaiyaTakahashi" className="social-list-link">
+                                <FontAwesomeIcon icon={faGithub} />
+                            </a>
+                        </li>
+                        <li className="social-list-item" style={{fontSize: "200%"}}>
+                            <a href="https://www.linkedin.com/in/kaiya-takahashi-93323b25a/" className="social-list-link">
+                                <FontAwesomeIcon icon={faLinkedin} />
+                            </a>
+                        </li>
+                        <li className="social-list-item" style={{fontSize: "200%"}}>
+                            <a href="https://www.instagram.com/yaikashi_1019/?hl=en-gb" className="social-list-link">
+                                <FontAwesomeIcon icon={faInstagram} />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <WhatIDo></WhatIDo>
             <section className="about-me">
