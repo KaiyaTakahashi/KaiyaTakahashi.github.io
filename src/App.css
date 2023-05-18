@@ -211,6 +211,10 @@ header {
 
 .intro {
     position: relative;
+    animation: fadein 1.5s;
+}
+.intro-not-in-view {
+    opacity: 0;
 }
 
 .contact-me::after {
@@ -222,6 +226,16 @@ header {
     background: var(--clr-gradual);
     opacity: 1;
 }
+
+#contact-me-button {
+    background: var(--clr-gradual);
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: 900;
+    border-color: transparent;
+}
+
 @media (max-width: 670px) {
     .intro-img {
         width: 180px;
@@ -262,7 +276,6 @@ header {
         grid-area: 1 / 1 / 3 / 2;
         /* Put colour label underneath */
         z-index: 2;
-        margin-right: 20px;
     }
 }
 

@@ -7,6 +7,7 @@ import { faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-
 import devTimeManagerImg from '/Users/kaiyatakahashi/Desktop/KaiyaTakahashi.github.io/src/img/Screenshot 2023-01-12 at 10.31.17 PM.png';
 import invoiceImg from '/Users/kaiyatakahashi/Desktop/KaiyaTakahashi.github.io/src/img/Screenshot 2022-12-08 at 1.44.07 PM.png';
 import { InView, useInView } from 'react-intersection-observer';
+import { Introduction } from './components/Introduction';
 
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -20,39 +21,6 @@ const navLinks = document.querySelectorAll('.nav-link');
 //       document.body.classList.remove('nav-open')
 //   })
 // })
-
-const WebsiteService = () => {
-    const {ref, inView, entry} = useInView({
-        threshold: 1
-    })
-    return (
-        <div className={inView ? "service": "serviceNotInView"} ref={ref}>
-            <h3>Full-Stack Website</h3>
-            <p>I created full stack website, using JavaScript as Front-End, 
-                Express.js as Back-end and PostgreSql as database. It has a
-                Login page which allows the user to login by using Json Web Token,
-                so that I can make the website more secure and provide better UX.
-            </p>
-        </div>
-    )
-}
-
-const MobileAppService = () => {
-    const {ref, inView, entry} = useInView({
-        threshold: 1
-    })
-    return (
-        <div className={inView ? "service": "serviceNotInView"} ref={ref}>
-            <h3>Mobile App</h3>
-            <p>
-                I worked as a software developer to create invoice application at
-                DP Code Academy. I basically worked on developping UI for the application.
-                I always tried to make the screen as simple as possible and easy for users to user by using libraries from
-                CocoaPods to provide a great UX.
-            </p>
-        </div>
-    )
-}
 
 const WhatIDo = () => {
     const {ref, inView, entry} = useInView({
@@ -112,49 +80,7 @@ function App() {
             </nav>
         </header>
         <main>
-            <section className="intro" id="home">
-                <h2 className="section-title section-title-intro">
-                    Hi, I'm Kaiya
-                    <h3>
-                        Mobile Developer
-                    </h3>
-                    <h3>
-                        &
-                    </h3>
-                    <h3>
-                        Full-Stack Web Developer
-                    </h3>
-                </h2>
-                {/* <p className="section-subtitle-intro">
-                    Front-End dev
-                </p> */}
-                <img className="intro-img myself-img" src={topImage} alt="first pic"></img>
-                <div>
-                    <div className='contact-me'>
-                        <div style={{display: "flex", columnGap: "5%", marginTop: "30px", paddingBottom: "20px"}}>
-                            <button>!!!!!</button>
-                            <h3>Contact Me Now</h3>
-                        </div>
-                    </div>
-                    <ul className="social-list" style={{height: "60%", display: "flex", alignItems: "center", margin: "0px"}}>
-                        <li className="social-list-item" style={{fontSize: "200%"}}>
-                            <a href="https://github.com/KaiyaTakahashi" className="social-list-link">
-                                <FontAwesomeIcon icon={faGithub} />
-                            </a>
-                        </li>
-                        <li className="social-list-item" style={{fontSize: "200%"}}>
-                            <a href="https://www.linkedin.com/in/kaiya-takahashi-93323b25a/" className="social-list-link">
-                                <FontAwesomeIcon icon={faLinkedin} />
-                            </a>
-                        </li>
-                        <li className="social-list-item" style={{fontSize: "200%"}}>
-                            <a href="https://www.instagram.com/yaikashi_1019/?hl=en-gb" className="social-list-link">
-                                <FontAwesomeIcon icon={faInstagram} />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+            <Introduction></Introduction>
             <WhatIDo></WhatIDo>
             <section className="about-me">
                 <h2 className="section-title-about">Who I am</h2>
@@ -165,9 +91,8 @@ function App() {
                         I'm KaiyaTakahashi, and I am Front-End developer and iOS Mobile developer.
                     </p>
                     <p> 
-                        I am using JavaScript, HTML, CSS and PostgreSql to create website.
-                        I enjoy creating website from user interface to Back-end code.
-
+                        I am using JavaScript, HTML, CSS and PostgreSql to create website, using Swift for mobile development.
+                        I enjoy creating website from front-end to back-end.
                     </p>
                     <p></p>
                 </div>
